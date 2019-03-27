@@ -1,0 +1,19 @@
+.container {
+  font-family: sans-serif;
+  background-color: #FFFFFF;
+  color: #3b3b3b;
+}
+
+.container_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #97E0E6;
+  padding: 1em 1em;
+  top: -5px;
+}
+
+.container_header > img {
+  height: 10em; 
+  border-radius: 25em;
+}

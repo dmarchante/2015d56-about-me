@@ -4,33 +4,59 @@
 <head>
   <title>2015d56 Lab - About Me</title>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <!-- <script async defer src="app.js"></script> -->
 </head>
 <body class="container">
   <header class="container_header">
-    <h1>David Marchante</h1>
-    <img src="./img/david-profile.jpg" alt="image of david">
+    <div class="container_header-content">
+      <h1>David Marchante</h1>
+      <p>
+        <a href="https://github.com/dmarchante">GitHub</a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/dmarchante">LinkedIn</a>
+      </p>
+    </div>
+    <div class="container_header-content">
+      <img src="./img/david-profile.jpg" alt="image of david">
+    </div>
   </header>
-  <main>
+  <main class="container_main">
     <div>
-        <h3>Bio</h3>
-        <p>Hello and welcome!</p>
-        <p>A little about myself:</p>
-        <p>
-          I am one of the few native Floridians that exist in the world. I am originally from Miami, but have lived in Southwest Florida for quite some time. My family is originally from Cuba, so I am fluent in Spanish. I also can understand and carry light converstations in French. My favorite foods are Cuban, naturally, and Middle Eastern food. 
-        </p>
-        <p>
-          Professionally, I have been a software engineer for a little over a year. My main focus was with full-stack web development, but my strength was more with UI development with some back-end and sprinkled in. Currently, I am focusing more on back-end development dealing more with data and less with web development.
-        </p>
+      <h2 class="main_section-header">About Me</h2>
     </div>
     <div>
-      <h3>Goals</h3>
+      <p>Hello and welcome!</p>
+      <p>A little about myself:</p>
+      <p>
+        I am one of the few native Floridians that exist in the world. I am originally from Miami, but have lived in Southwest Florida for quite some time. My family is originally from Cuba, so I am fluent in Spanish. I also can understand and carry light converstations in French. My favorite foods are Cuban, naturally, and Middle Eastern food. 
+      </p>
+      <p>
+        Professionally, I have been a software engineer for a little over a year. My main focus was with full-stack web development, but my strength was more with UI development with some back-end and sprinkled in. Currently, I am focusing more on back-end development dealing more with data and less with web development.
+      </p>
     </div>
     <div>
-      <h3>Skills</h3>
+      <h2 class="main_section-header">Goals</h2>
+      <ul>
+        <li>Become a thought leader in the software industry</li>
+        <li>Develop an area of expertise within </li>
+      </ul>
     </div>
     <div>
-      <h3>Projects</h3>
+      <h2 class="main_section-header">Skills</h2>
+      <ul class="main_section-content">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>C#</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="main_section-header">Projects</h2>
       <ul>
         <li>Operation Code</li>
         <li>Flightdocs</li>
@@ -39,7 +65,7 @@
       </ul>
     </div>
     <div>
-      <h3>Experience</h3>
+      <h2 class="main_section-header">Experience</h2>
       <ul>
         <li>Amazon</li>
         <li>Flightdocs</li>
@@ -48,15 +74,15 @@
       </ul>
     </div>
     <div>
-      <h3>Education</h3>
+      <h2 class="main_section-header">Education</h2>
       <ul>
-        <li>UMUC</li>
-        <li>Penn State</li>
         <li>Code Fellows</li>
+        <li>Penn State</li>
+        <li>UMUC</li>
       </ul>
     </div>
   </main>
-  <footer>
+  <footer class="container_footer">
 
   </footer>
 </body>

@@ -12,7 +12,7 @@ const questionPrompts = [
   'Am I from Florida?',
   'Am I Cuban?',
   'Am I fluent in Spanish?',
-  'Am I fluent in French',
+  'Am I fluent in French?',
   'Is my favroite food Cuban food?',
 ];
 
@@ -44,22 +44,32 @@ if (knowDavid === 'yes' || knowDavid === 'y') {
       switch (i) {
       case (i = 0):
         alert(`Correct ${userName}. I am a rare Florida naitve.`);
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log(`Correct ${userName}. I am a rare Florida naitve.`);
         break;
       case (i = 1):
         alert('I am first-generation Cuban, good guess!');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('I am first-generation Cuban, good guess!');
         break;
       case (i = 2):
         alert('Si! I am a native Spanish speaker');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('Yes! I am a native Spanish speaker');
         break;
       case (i = 3):
         alert ('Non, but I am conversant in French.');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('No, but I am conversant in French.');
         break;
       case (i = 4):
         alert('Of course it is!');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('Of course it is!');
         break;
       default:
@@ -69,22 +79,32 @@ if (knowDavid === 'yes' || knowDavid === 'y') {
       switch (i) {
       case (i = 0):
         alert('I know it surprising, but I was born andraised in Florida.');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('I know it surprising, but I was born andraised in Florida.');
         break;
       case (i = 1):
         alert('I am Cuban, but the odds were on your side!');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('I am Cuban, but the odds were on your side!');
         break;
       case (i = 2):
         alert('Being first-generation Cuban I had tospeak to my grand-parents in Spanish.');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('Being first-generation Cuban I had tospeak to my grand-parents in Spanish.');
         break;
       case (i = 3):
         alert ('I am not fluent, but I am conversant.');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('I am not fluent, but I am conversant.');
         break;
       case (i = 4):
         alert('It is. Cuban food reminds me of home.');
+        console.log(questionPrompts[i]);
+        console.log(response);
         console.log('I do. Cuban food reminds me of home.');
         break;
       default:

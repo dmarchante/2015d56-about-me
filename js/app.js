@@ -129,7 +129,7 @@ if (knowDavid === 'yes' || knowDavid === 'y') {
         'Tunisia',
       ];
 
-      const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?'
+      const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?';
       let countryResponse= prompt(contryRepresentationPrompt);
       let n = 0;
 

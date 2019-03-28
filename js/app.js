@@ -133,9 +133,9 @@ if (knowDavid === 'yes' || knowDavid === 'y') {
       let countryResponse= prompt(contryRepresentationPrompt);
       let n = 0;
 
-      while(n < countries.length) {
+      for (n; n < countries.length; n++) {
         if (countries[n] === countryResponse) {
-          alert('Correct');
+          alert('Correct!');
         } else {
           alert('Incorrect.');
         }

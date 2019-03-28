@@ -16,6 +16,69 @@ const questionPrompts = [
 
 introductionGame();
 
+function introductionGame() {
+  let i = 0;
+
+  const knowDavid = prompt(greetingPrompt).toLowerCase();
+
+  if (knowDavid === 'yes' || knowDavid === 'y') {
+    for (i; i < questionPrompts.length; i++) {
+      if (i <= 4) {
+        let response = prompt(questionPrompts[i]).toLowerCase();
+
+        if (response === 'yes' || response === 'y') {
+          positiveResponse(i, response);
+        } else if (response === 'no' || response === 'n') {
+          negativeResponse(i, response);
+        } else {
+          errorResponse(i);
+        }
+      } else if (i === 5) {
+        const favoriteNumberPrompt = 'What is my favorite number?';
+
+        let attempts = 0;
+        let responseNumber = prompt(favoriteNumberPrompt);
+        while (attempts < 3) {
+          attempts++;
+          if (attempts > 0) {
+            responseNumber = prompt(`${favoriteNumberPrompt} you have ${attempts} of 3 left.`);
+          }
+          if (responseNumber < 9) {
+            alert('Too low');
+          } else if (responseNumber > 9) {
+            alert('Too high');
+          } else {
+            alert('You got it');
+          }
+        }
+      } else if (i === 6) {
+        const countries = [
+          'Dominican Republic',
+          'France',
+          'Italy',
+          'Tunisia',
+        ];
+
+        const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?';
+        let countryResponse = prompt(contryRepresentationPrompt);
+        let n = 0;
+
+        for (n; n < countries.length; n++) {
+          if (countries[n] === countryResponse) {
+            alert('Correct!');
+          } else {
+            alert('Incorrect.');
+          }
+        }
+      }
+    }
+  } else if (knowDavid === 'no' || knowDavid === 'n') {
+    alert('Ok. Thank you for visiting my site nonetheless');
+  }
+
+  console.log(questionPrompts[i]);
+}
+
 function positiveResponse(question, response) {
   switch (question) {
   case (question = 0):
@@ -98,66 +161,3 @@ function errorResponse(question) {
     prompt(questionPrompts[question]).toLowerCase();
   }
 }
-
-function introductionGame() {
-
-  let i = 0;
-
-  const knowDavid = prompt(greetingPrompt).toLowerCase();
-
-  if (knowDavid === 'yes' || knowDavid === 'y') {
-    for (i; i < questionPrompts.length; i++) {
-      if (i <= 4) {
-        let response = prompt(questionPrompts[i]).toLowerCase();
-
-        if (response === 'yes' || response === 'y') {
-          positiveResponse(i, response);
-        } else if (response === 'no' || response === 'n') {
-          negativeResponse(i, response);
-        } else {
-          errorResponse(i);
-        }
-      } else if (i === 5) {
-        const favoriteNumberPrompt = 'What is my favorite number?';
-
-        let attempts = 0;
-        let responseNumber = prompt(favoriteNumberPrompt);
-        while (attempts < 3) {
-          attempts++;
-          if (attempts > 0) {
-            responseNumber = prompt(`${favoriteNumberPrompt} you have ${attempts} of 3 left.`);
-          }
-          if (responseNumber < 9) {
-            alert('Too low');
-          } else if (responseNumber > 9) {
-            alert('Too high');
-          } else {
-            alert('You got it');
-          }
-        }
-      } else if (i === 6) {
-        const countries = [
-          'Dominican Republic',
-          'France',
-          'Italy',
-          'Tunisia',
-        ];
-
-        const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?';
-        let countryResponse = prompt(contryRepresentationPrompt);
-        let n = 0;
-
-        for (n; n < countries.length; n++) {
-          if (countries[n] === countryResponse) {
-            alert('Correct!');
-          } else {
-            alert('Incorrect.');
-          }
-        }
-      }
-    }
-  } else if (knowDavid === 'no' || knowDavid === 'n') {
-    alert('Ok. Thank you for visiting my site nonetheless');
-  }
-}
-// console.log(questionPrompts[]);

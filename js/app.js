@@ -3,19 +3,42 @@
 const userNamePrompt = 'Hello and welcome to my site. My name is David, what can I call you?';
 const userName = prompt(userNamePrompt);
 const greetingPrompt = `Nice to meet you, ${userName}. Would you like to play a game to get to know me better?`;
+// const favoriteNumberPrompt = 'What is my favorite number?';
+// const favoriteNumber = prompt(favoriteNumberPrompt);
+// const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?'
+// const countryRepresentation = prompt(contryRepresentationPrompt);
+
 const questionPrompts = [
   'Am I from Florida?',
   'Am I Cuban?',
   'Am I fluent in Spanish?',
   'Am I fluent in French',
-  'Is my favroite food Cuban food?'
+  'Is my favroite food Cuban food?',
 ];
+
+// const countries = [
+//   'Dominican Republic',
+//   'France',
+//   'Italy',
+//   'Tunisia',
+// ];
+
 const knowDavid = prompt(greetingPrompt).toLowerCase();
 let i = 0;
 
 if (knowDavid === 'yes' || knowDavid === 'y') {
   for (i; i < questionPrompts.length; i++) {
     let response = prompt(questionPrompts[i]).toLowerCase();
+
+    // if (typeof responseNumber === 'number') {
+    //   if (response < 9) {
+    //     alert('Too low');
+    //   } else if (response > 9){
+    //     alert('Too high');
+    //   } else {
+    //     alert('You got it');
+    //   }
+    // }
 
     if (response === 'yes' || response === 'y') {
       switch (i) {
@@ -66,7 +89,7 @@ if (knowDavid === 'yes' || knowDavid === 'y') {
         break;
       default:
         alert('Learn more about me on the site!');
-      } 
+      }
     } else {
       let gameError = 0;
       while(gameError < 3) {
@@ -76,6 +99,7 @@ if (knowDavid === 'yes' || knowDavid === 'y') {
       }
     }
   }
+
 } else if (knowDavid === 'no' || knowDavid === 'n') {
   alert('Ok. Thank you for visiting my site nonetheless');
 }

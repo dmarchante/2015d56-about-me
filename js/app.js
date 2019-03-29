@@ -17,9 +17,8 @@ const questionPrompts = [
 introductionGame();
 
 function introductionGame() {
-  let i = 0;
-
   const knowDavid = prompt(greetingPrompt).toLowerCase();
+  let i = 6;
 
   if (knowDavid === 'yes' || knowDavid === 'y') {
     for (i; i < questionPrompts.length; i++) {
@@ -36,22 +35,21 @@ function introductionGame() {
       } else if (i === 5) {
         const favoriteNumberPrompt = 'What is my favorite number?';
 
-        let attempts = 0;
-        let responseNumber = prompt(favoriteNumberPrompt);
-        while (attempts < 3) {
-          attempts++;
-          if (attempts > 0) {
-            responseNumber = prompt(`${favoriteNumberPrompt} you have ${attempts} of 3 left.`);
-          }
+        let attemptsFavoriteNumber = 1;
+        while (attemptsFavoriteNumber <= 3) {
+          let responseNumber = prompt(`${favoriteNumberPrompt} You are attempting try ${attemptsFavoriteNumber} out of 3.`);
+          attemptsFavoriteNumber++;
           if (responseNumber < 9) {
             alert('Too low');
           } else if (responseNumber > 9) {
             alert('Too high');
           } else {
             alert('You got it');
+            break;
           }
         }
       } else if (i === 6) {
+        const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?';
         const countries = [
           'Dominican Republic',
           'France',
@@ -59,15 +57,42 @@ function introductionGame() {
           'Tunisia',
         ];
 
-        const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?';
-        let countryResponse = prompt(contryRepresentationPrompt);
-        let n = 0;
+        // let countryResponse = prompt(contryRepresentationPrompt);
+        let attemptsCountry = 1;
 
-        for (n; n < countries.length; n++) {
-          if (countries[n] === countryResponse) {
-            alert('Correct!');
-          } else {
-            alert('Incorrect.');
+        while (attemptsCountry < 3) {
+          let countryResponse = prompt(`${contryRepresentationPrompt} You are attempting try ${attemptsCountry} out of 3.`);
+          attemptsCountry++;
+          for(let n = 1; n < countries.length; n++){
+            if (countryResponse === countries[n]){
+              switch(n) {
+              case (n === 'Dominican Republic'):
+                alert('Yes! I am half Dominican');
+                console.log(contryRepresentationPrompt[n]);
+                console.log(countryResponse);
+                console.log('Of course it is!');
+                break;
+              case (n === 'France'):
+                alert('Yes! Everyone in my household are French citiznes except me.');
+                console.log(contryRepresentationPrompt[n]);
+                console.log(countryResponse);
+                console.log('Yes! Everyone in my household are French citiznes except me.');
+                break;
+              default:
+                alert('Learn more about me on the site!');
+              }
+            } else if (countryResponse !== countries[n]) {
+              alert('Incorrect.');
+            }
+
+            // if (countryResponse !== countries[n]) {
+            //   alert('Incorrect.');
+            // }
+
+            // if (countryResponse === countries[n]){
+            //   alert('Correct!');
+            //   break;
+            // }
           }
         }
       }

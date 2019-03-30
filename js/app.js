@@ -44,9 +44,10 @@ function boolResponse(question) {
   } else if (response === 'no' || response === 'n') {
     negativeResponse(question, response);
   } else {
-    errorResponseBool(question);
+    errorBoolResponse(question);
   }
 }
+
 function positiveResponse(question, response) {
   switch (question) {
   case (0):
@@ -139,7 +140,7 @@ function numberResponse(question) {
       alert('You got it');
       break;
     } else {
-      errorResponseNumber(question);
+      errorNumberResponse(question);
     }
   }
 }
@@ -189,35 +190,23 @@ function countryResponse(question) {
           alert(`Try again. ${countryResponse}`);
         }
       } else {
-        errorResponseCountry(question);
+        errorCountryResponse(question);
       }
     }
   }
 }
 
-function errorResponseBool(question) {
-  let gameError = 0;
-  while (gameError < 3) {
-    gameError++;
-    alert('Please enter yes/y or no/n');
-    prompt(questionPrompts[question]).toLowerCase();
-  }
+function errorBoolResponse(question) {
+  alert('Please enter yes/y or no/n');
+  prompt(questionPrompts[question]).toLowerCase();
 }
 
-function errorResponseNumber(question) {
-  let numberError = 0;
-  while (numberError < 3) {
-    numberError++;
-    alert('Please enter a number');
-    prompt(questionPrompts[question]).toLowerCase();
-  }
+function errorNumberResponse(question) {
+  alert('Please enter a number');
+  prompt(questionPrompts[question]).toLowerCase();
 }
 
-function errorResponseCountry(question) {
-  let countryError = 0;
-  while (countryError < 3) {
-    countryError++;
-    alert('Please enter a number');
-    prompt(questionPrompts[question]).toLowerCase();
-  }
+function errorCountryResponse(question) {
+  alert('Please enter a number');
+  prompt(questionPrompts[question]).toLowerCase();
 }

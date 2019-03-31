@@ -26,7 +26,7 @@ function introductionGame() {
       } else if (question === 5) {
         numberResponse(question);
       } else if (question === 6) {
-        countryResponse(question);
+        countryResponse();
       }
     }
   } else if (knowDavid === 'no' || knowDavid === 'n') {
@@ -145,7 +145,7 @@ function numberResponse(question) {
   }
 }
 
-function countryResponse(question) {
+function countryResponse() {
   const contryRepresentationPrompt = 'Guess a countries that is represented in my household (besides United States and Cuba)?';
   const countries = [
     'Dominican Republic',
@@ -156,8 +156,8 @@ function countryResponse(question) {
 
   let attemptsCountry = 1;
 
+  let countryResponse = prompt(`${contryRepresentationPrompt} You are attempting try ${attemptsCountry} out of 3.`);
   while (attemptsCountry < 3) {
-    let countryResponse = prompt(`${contryRepresentationPrompt} You are attempting try ${attemptsCountry} out of 3.`);
     attemptsCountry++;
     for(let country = 1; country < countries.length; country++){
       if (countryResponse === countries[country]){
@@ -189,8 +189,6 @@ function countryResponse(question) {
         default:
           alert(`Try again. ${countryResponse}`);
         }
-      } else {
-        errorCountryResponse(question);
       }
     }
   }
@@ -207,6 +205,6 @@ function errorNumberResponse(question) {
 }
 
 function errorCountryResponse(question) {
-  alert('Please enter a number');
+  alert('Please enter a the name a value of a country');
   prompt(questionPrompts[question]).toLowerCase();
 }

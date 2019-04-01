@@ -26,7 +26,7 @@ function introductionGame() {
       } else if (question === 5) {
         numberResponseInitial(question);
       } else if (question === 6) {
-        numberResponseInitial(question);
+        countryResponseInitial(question);
       }
     }
   } else if (knowDavid === 'no' || knowDavid === 'n') {

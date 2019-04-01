@@ -195,7 +195,7 @@ function countryResponseAttempt(question, attempt, countries, validResponse) {
     }
 
     if (validResponse){
-      countrySwitchLogic(question, countryResponse);
+      countryResponseLogic(question, countryResponse);
       attempt = 4;
     } else {
       attempt++;
@@ -203,7 +203,7 @@ function countryResponseAttempt(question, attempt, countries, validResponse) {
   }
 }
 
-function countrySwitchLogic(question, response) {
+function countryResponseLogic(question, response) {
   switch(response) {
   case ('dominican republic'):
     alert('Yes! I am half Dominican');

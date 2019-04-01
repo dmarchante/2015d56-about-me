@@ -114,18 +114,19 @@ function negativeResponse(question, response) {
 
 function numberResponseInitial(question) {
   let attemptNumber = 1;
-  let responseNumber = prompt(`${questionPrompts[question]} You are attempting try ${attemptNumber} out of 3.`);
+  let responseNumberString = prompt(`${questionPrompts[question]} You are attempting try ${attemptNumber} out of 3.`);
+  let responseNumber = parseInt(responseNumberString);
 
-  if (parseInt(responseNumber) === 9) {
+  if (responseNumber === 9) {
     alert('You got it');
     responseLog(question, responseNumber);
     console.log('You got it.');
-  } else if (parseInt(responseNumber) < 9) {
+  } else if (responseNumber < 9) {
     alert('Too low.');
     responseLog(question, responseNumber);
     console.log('Too low.');
     numberResponseAttempt(attemptNumber, question);
-  } else if (parseInt(responseNumber) < 9) {
+  } else if (responseNumber < 9) {
     alert('Too low.');
     responseLog(question, responseNumber);
     console.log('Too high.');
@@ -137,18 +138,20 @@ function numberResponseAttempt(attempt, question) {
   attempt++;
 
   while (attempt <= 3) {
-    let responseNumber = prompt(`${questionPrompts[question]} You are attempting try ${attempt} out of 3.`);
-    if (parseInt(responseNumber) === 9) {
+    let responseNumberString = prompt(`${questionPrompts[question]} You are attempting try ${attempt} out of 3.`);
+    let responseNumber = parseInt(responseNumberString);
+
+    if (responseNumber === 9) {
       alert('You got it');
       responseLog(question, responseNumber);
       console.log('You got it.');
       attempt = 4;
-    } else if (parseInt(responseNumber) < 9) {
+    } else if (responseNumber < 9) {
       alert('Too low.');
       responseLog(question, responseNumber);
       console.log('Too low.');
       attempt++;
-    } else if (parseInt(responseNumber) > 9) {
+    } else if (responseNumber > 9) {
       alert('Too high');
       responseLog(question, responseNumber);
       console.log('Too high.');

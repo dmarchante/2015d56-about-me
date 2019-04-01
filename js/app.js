@@ -24,9 +24,9 @@ function introductionGame() {
       if (question <= 4) {
         boolResponse(question);
       } else if (question === 5) {
-        numberResponse(question);
+        numberResponseInitial(question);
       } else if (question === 6) {
-        countryResponse(question);
+        numberResponseInitial(question);
       }
     }
   } else if (knowDavid === 'no' || knowDavid === 'n') {
@@ -112,7 +112,7 @@ function negativeResponse(question, response) {
   }
 }
 
-function numberResponse(question) {
+function numberResponseInitial(question) {
   let attemptNumber = 1;
   let responseNumber = prompt(`${questionPrompts[question]} You are attempting try ${attemptNumber} out of 3.`);
 
@@ -159,7 +159,7 @@ function numberResponseAttempt(attempt, question) {
   }
 }
 
-function countryResponse(question) {
+function countryResponseInitial(question) {
   const countries = [
     'dominican republic',
     'france',

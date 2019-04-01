@@ -177,7 +177,7 @@ function countryResponseInitial(question) {
   }
 
   if (validResponse) {
-    countrySwitchLogic(question, countryResponse);
+    countryResponseLogic(question, countryResponse);
   } else {
     countryResponseAttempt(question, attemptsCountry, countries, validResponse);
   }
